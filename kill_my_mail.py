@@ -31,7 +31,7 @@ def authenticate_gmail():
 def delete_old_emails(service, verbose=False):
     """Delete emails older than two years and optionally print their date and subject."""
     # Calculate the date two years ago
-    two_years_ago = (datetime.datetime.utcnow() - datetime.timedelta(days=730)).strftime('%Y/%m/%d')
+    two_years_ago = (datetime.utcnow() - datetime.timedelta(days=730)).strftime('%Y/%m/%d')
     query = f"before:{two_years_ago}"
 
     # Initialize variables for pagination
